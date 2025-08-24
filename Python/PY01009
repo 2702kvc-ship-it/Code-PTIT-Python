@@ -1,0 +1,12 @@
+s = input()
+dem1 = dem2 = 0
+for i in s:
+    if i.isupper():
+        dem1 += 1
+    elif i.islower():
+        dem2 += 1
+
+if dem1 <= dem2:
+    print(s.lower())
+else:
+    print(s.upper())
