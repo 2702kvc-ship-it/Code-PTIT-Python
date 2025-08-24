@@ -1,0 +1,10 @@
+s = input()
+chuoi = ""
+for i in range(len(s) - 3, len(s)):
+    chuoi += s[i]
+
+if chuoi == ".py" or chuoi == ".PY" or chuoi == ".Py" or chuoi == ".pY":
+    print("yes")
+else:
+    print("no")
+        
