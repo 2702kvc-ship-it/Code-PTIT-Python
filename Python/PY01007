@@ -1,0 +1,13 @@
+t = int(input())
+while t > 0:
+    dem = 0
+    s = input().split()
+    money = float(s[0])
+    rate = float(s[1])
+    want = float(s[2])
+    while money < want:
+        dem += 1
+        money = money * (1 + rate / 100)
+    print(dem)
+
+    t -= 1
