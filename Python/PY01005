@@ -1,0 +1,11 @@
+a = int(input())
+dem = 0
+while a > 0:
+    so = a % 10
+    if so == 4 or so == 7:
+        dem += 1
+    a //= 10
+if dem == 4 or dem == 7:
+    print("YES")
+else: 
+    print("NO")
