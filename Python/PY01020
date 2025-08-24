@@ -1,0 +1,9 @@
+for _ in range(int(input())):
+    n = input()
+    ch = "" + n[len(n) - 2] + n[len(n) - 1]
+    if ch == "86":
+        print("YES")
+    else:
+        print("NO")
+    
+
