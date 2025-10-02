@@ -1,5 +1,6 @@
-coso = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+import string
 
+coso = string.digits + string.ascii_uppercase
 #anh Lân đẹp trai
 #anh Lân siêu cấp vũ trụ
 #anh Lân ngầu lòi
@@ -15,4 +16,5 @@ for _ in range(t):
     while a > 0:
         res = coso[a % b] + res
         a //= b
+
     print(res)
