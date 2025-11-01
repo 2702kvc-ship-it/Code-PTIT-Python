@@ -1,36 +1,31 @@
-t = int(input())
+def danhgia(n):
+    if n < 5:
+        return 'TRUOT'
+    if n < 8:
+        return 'CAN NHAC'
+    if n <= 9.5:
+        return 'DAT'
+    return 'XUAT SAC'
 
-a = []
+ds = []
 
-while len(a) < t:
-    a += list(map(int, input().split()))
+def stt(idx):
+    return 'TS0' + str(idx) # Khắm chó vl éo giống mọi bài khác :v
 
-b = []
-for i in a:
-    if i % 2 == 0:
-        b.append('Chan')
-    else:
-        b.append('Le')
+for idx in range(1, int(input()) + 1):
+    name = input()
+    dlt = input()
+    dlt = float(dlt)
+    if dlt > 10:
+        dlt /= 10
+    dth = input()
+    dth = float(dth)
+    if dth > 10:
+        dth /= 10
+    dtc = (dlt + dth) / 2
+    ds.append([stt(idx), name, dtc, danhgia(dtc)])
 
-l1 = []
-l2 = []
-for i in a:
-    if i % 2 == 0:
-        l1.append(i)
-    else:
-        l2.append(i)
+ds = list(sorted(ds, key=lambda x: -x[2]))
 
-l1.sort()
-l2.sort(reverse=True)        
-
-idx1, idx2 = 0, 0
-res = []
-for i in b:
-    if i == 'Chan':
-        res.append(l1[idx1])
-        idx1 += 1
-    else:
-        res.append(l2[idx2])
-        idx2 += 1
-
-print(*res)
+for i in range(len(ds)):
+    print(ds[i][0], ds[i][1], f"{ds[i][2]:.2f}", ds[i][3])
